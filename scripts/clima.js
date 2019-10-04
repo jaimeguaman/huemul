@@ -13,7 +13,7 @@
 //   @jorgeepunan
 
 module.exports = robot => {
-  robot.respond(/clima\s?(.*)/i, msg => {
+  robot.respond(/clima|cluma\s?(.*)/i, msg => {
     const city = msg.match[1] || 'Santiago'
     robot
       .http(`http://wttr.in/${city}?m`)
